@@ -34,6 +34,7 @@ public class HostController : MonoBehaviour {
             RoomState.players = room.players;
             RoomState.active = "true";
             RoomState.host = PlayerState.id;
+            RoomState.host = 1;
             SQL.Instance.getData("INSERT INTO `room`(`name`, `active`, `players`, `host`, `started`) VALUES ('" + room.name + "', true, " + room.players + "," + room.host + ", false)");
             SceneManager.LoadScene("lobby");
         }
