@@ -16,23 +16,7 @@ using System.Text;
             this.players = p;
             this.host = h;
         }
-
-        public RomOLD()
-        {
-            this.roomID = RoomState.roomID;
-            this.name = RoomState.name;
-            this.active = RoomState.active;
-            this.players = RoomState.players;
-            this.host = RoomState.host;
-        }
-
-        public void RoomToRoomState()
-        {
-            RoomState.roomID = this.roomID;
-            RoomState.name = this.name;
-            RoomState.active = this.active;
-            RoomState.players = this.players;
-            RoomState.host = this.host;
-        }
+    
+    
 
     }

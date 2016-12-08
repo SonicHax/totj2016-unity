@@ -29,7 +29,9 @@ public class SQL
     {
         Debug.Log(query);
         WWW www = new WWW("http://questionmarkgames.nl/API/query.php?s=abcd&q=" + WWW.EscapeURL(query));
+        Debug.Log(www.url);
         while (!www.isDone) { }
+        Debug.Log(www.text);
         return www.text;
     }
 }

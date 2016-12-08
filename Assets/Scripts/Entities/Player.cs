@@ -26,7 +26,7 @@ namespace totj3.Models
         {
             accountID = a.accountID;
             nickName = a.nickName;
-            roomID = RoomState.roomID;
+           // roomID = RoomState.roomID;
             vehicle = a.vehicle;
             hat = a.hat;
             money = 5;

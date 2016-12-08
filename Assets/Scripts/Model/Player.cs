@@ -8,7 +8,7 @@ namespace Assets.Scripts.Model
 {
     public class Player
     {
-        public int id;
+        public int accountID;
         public string name;
         public int vehicle;
         public int hat;

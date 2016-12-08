@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using totj3.Models;
 
-    public static class RoomState
+    public static class RoomState2
     {
         public static int roomID;
         public static string name;

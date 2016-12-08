@@ -10,7 +10,7 @@ namespace Assets.Scripts.States
     {                                              
         public static int id;                      
         public static string name;                 
-        public static bool active;               
+        public static string active;               
         public static int players;                 
         public static int host;
         public static Player p1;
