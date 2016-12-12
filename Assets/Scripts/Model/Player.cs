@@ -9,7 +9,7 @@ namespace Assets.Scripts.Model
     public class Player
     {
         public int accountID;
-        public string name;
+        public string nickName = "";
         public int vehicle;
         public int hat;
     }

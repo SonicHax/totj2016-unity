@@ -27,11 +27,8 @@ public class SQL
     /// <returns>The webrequest.text. This contains all text of the webpage</returns>
     public string getData(string query)
     {
-        Debug.Log(query);
         WWW www = new WWW("http://questionmarkgames.nl/API/query.php?s=abcd&q=" + WWW.EscapeURL(query));
-        Debug.Log(www.url);
         while (!www.isDone) { }
-        Debug.Log(www.text);
         return www.text;
     }
 }

@@ -17,5 +17,7 @@ namespace Assets.Scripts.States
         public static Player p2;
         public static Player p3;
         public static Player p4;
+
+        public static int currentPlayers;
     }                                              
 }
