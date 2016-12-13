@@ -15,6 +15,7 @@ public class ButtonController : MonoBehaviour {
     public GameObject credits;
     public GameObject player;
     public GameObject lobby;
+    public GameObject board;
 
     private GameObject currentMid;
     public Button backBtn;
@@ -236,7 +237,7 @@ public class ButtonController : MonoBehaviour {
         {
             SQL.Instance.getData("UPDATE `account` SET `roomID`= 0 WHERE accountID " + RoomState.p4.accountID);
         }
-
+        switchPanel(main);
     }
     //
 
@@ -250,7 +251,9 @@ public class ButtonController : MonoBehaviour {
     public Text lobbyRoomName;
     public Text lobbyPlayerNames;
     private int lobbyPullTimer = -1;
-
+    /// <summary>
+    /// 
+    /// </summary>
     public Button lobbyStartBtn;
     public Button lobbyExitBtn;
 
