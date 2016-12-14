@@ -76,18 +76,21 @@ public class BoardController : MonoBehaviour {
         tiles[28] = tile29;
         tiles[29] = tile30;
 
+        //AndroidNFCReader.enableBackgroundScan();
+        //AndroidNFCReader.ScanNFC("Fred", "OnScan");
+        
+
     }
 	
 	// Update is called once per frame
 	void Update () {
-        onScan();
+        
 
 	}
 
 
-    public void onScan()
-    {
-        tile1.sprite = prefab.sprite;
-        currentTile++;
-    }
+    //public void OnScan(string result)
+    //{
+        
+   // }
 }
