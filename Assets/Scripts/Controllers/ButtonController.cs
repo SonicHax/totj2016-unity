@@ -87,7 +87,6 @@ public class ButtonController : MonoBehaviour {
                 int.TryParse(SQL.Instance.getData("select max(roomID) as result from room"), out RoomState.id);
 
                 SQL.Instance.getData("UPDATE `account` SET `roomID`= " + RoomState.id + " WHERE accountID = '" + PlayerState.id + "'");
-                ButtonController BC = new ButtonController();
                 switchPanel(lobby);
             }
         }
@@ -268,7 +267,7 @@ public class ButtonController : MonoBehaviour {
                 string currentPlayers = SQL.Instance.getData("SELECT * FROM `account` WHERE roomID = '" + RoomState.id + "'");
                 string[] current = currentPlayers.Split('*');
                 RoomState.currentPlayers = current.Length;
-                Player defaultPlayer = new Player();
+                //Player defaultPlayer = new Player();
                 RoomState.p1 = new Player();
                 RoomState.p2 = new Player();
                 RoomState.p3 = new Player();

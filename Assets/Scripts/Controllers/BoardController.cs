@@ -1,7 +1,11 @@
-﻿using System.Collections;
+﻿using KEggGameStudio.NFC;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using KEggGameStudio;
+using KEggGameStudio.NFC;
 
 public class BoardController : MonoBehaviour {
 
@@ -41,9 +45,24 @@ public class BoardController : MonoBehaviour {
     private Image[] tiles;
 
     private int currentTile;
-	// Use this for initialization
-	void Start () {
+
+    // NFC Android Plugin
+    private string ReceivingFunName = "OnReceivingMsg"; //  Receive function Name
+
+    private void Init_NFC()
+    {
+        NFC_Mgr.Self.SetCodingType(DefineNFC.CodingType.US_ASCII);
+        NFC_Mgr.Self.SetOperational(DefineNFC.NFC_Operational.READ);
+        NFC_Mgr.Self.SetListener(this.gameObject, ReceivingFunName);
+    }
+
+    void Start()
+    {
+        // Init & Set Receive Msg Function
+        Init_NFC();
+   
         currentTile = 0;
+        
         tiles = new Image[30];
 
         tiles[1] = tile2;
@@ -77,13 +96,16 @@ public class BoardController : MonoBehaviour {
         tiles[29] = tile30;
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-        onScan();
+    // Receive Tag Msg
+    private void OnReceivingMsg(string str)
+    {
+        Debug.Log("Read Tag: " + str);   // Do something.
+    }
+
+    // Update is called once per frame
+    void Update () {
 
 	}
-
 
     public void onScan()
     {
